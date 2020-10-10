@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kicks</title>
+<style>
+
+	body {
+	background-image: url('background.jpg');
+	background-repeat: no-repeat;
+	}
+	h1 {
+	color: black;
+	font-size: 45px;
+    font-family:Times New Roman;
+	}
+		
+	/* Image */    
+    .logo {
+  	float: left;
+  	margin-left: 100px;
+	}
+	.image1 {
+  	float: left;
+  	margin-left: 70px;
+	margin-top: 100px;
+	}	
+	.image2 {
+  	float: left;
+  	margin-left: 20px;
+	margin-top: 100px;
+	}
+	.image3 {
+  	float: left;
+  	margin-left: 70px;
+	margin-top: 10px;
+	}
+	.image1:hover {
+	box-shadow: 0 0 2px 1px rgba(51, 51, 51);
+	}
+	.image2:hover {
+	box-shadow: 0 0 2px 1px rgba(51, 51, 51);
+	}
+	.image3:hover {
+	box-shadow: 0 0 2px 1px rgba(51, 51, 51);
+	}    
+	.last1 {
+  	float: left;
+  	margin-left: 840px;
+	margin-top: 100px;
+	}	
+	/* Text*/
+	.text1 {
+	position: absolute;
+	font-size: 18px;
+	top: 93em; 
+	left: 4.5em;
+	}	
+	.text2 {
+	position: absolute;
+	font-size: 18px;
+	top: 93em;
+	left: 37.5em;
+	}
+	.text3 {
+	position: absolute;
+	font-size: 18px;
+	top: 93em;
+	left: 70em;
+	}	
+	.text4 {
+	position: absolute;
+	font-size: 20px;
+	top: 27em;
+	left: 47.5em;
+	color: white;
+	line-height: 20pt; 
+	letter-spacing:1pt; 
+	}
+	.text5 {
+	position: absolute;
+	font-size: 45px;
+	top: 10.5em;
+	left: 21em;
+	color: white;
+    font-family: Times New Roman;
+	}
+	.text6 {
+	position: absolute;
+	font-size: 100px;
+	top: 2.5em;
+	left: 11.5em;
+	color: white;
+    font-family: Times New Roman;
+	font-weight: bold;
+	} 	
+	.text7 {
+	position: absolute;
+	font-size: 18px;
+	top: 130em; 
+	left: 4.5em;
+	}	
+	.text8 {
+	position: absolute;
+	font-size: 18px;
+	top: 130em;
+	left: 37.5em;
+	}
+	.text9 {
+	position: absolute;
+	font-size: 18px;
+	top: 130em;
+	left: 70em;
+	margin-bottom: 120px;
+	}
+
+
+/* Slideshow container */
+.a-container {
+  max-width: 630px;
+  position: relative;
+  margin-left: 240px;
+  margin-top: 95px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+</style>
+</head>
+
+<body>
+<a href="file:///C:/Users/Admin/Desktop/CI14%20Project/Kicks.html"><img src="logo.png" style="float: left; margin-right:550px" class="logo"></a>
+<h1> Men's Shoes</h1>
+
+<div class="a-container">
+<div class="mySlides">
+  <img src="a1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <img src="a2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <img src="a3.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<br>
+
+<div style="margin-left: 500px">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>	
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+ <a href="file:///C:/Users/Admin/Desktop/CI14%20Project/Underlyinga.html"><img src="b.jpg" style="width:30%;" class="image1"></a>
+ <a href="file:///C:/Users/Admin/Desktop/CI14%20Project/Underlyingb.html"><img src="c.jpg" style="width:30%;" class="image2"></a>
+ <a href="file:///C:/Users/Admin/Desktop/CI14%20Project/Underlyingc.html"><img src="d.jpg" style="width:30%;" class="image2"></a>
+ <a href="file:///C:/Users/Admin/Desktop/CI14%20Project/Underlyingd.html"><img src="e.jpg" style="width:30%;" class="image1"></a>
+ <a href="file:///C:/Users/Admin/Desktop/CI14%20Project/Underlyinge.html"><img src="f.jpg" style="width:30%;" class="image2"></a>
+ <a href="file:///C:/Users/Admin/Desktop/CI14%20Project/Underlyingf.html"><img src="g.jpg" style="width:30%;" class="image2"></a>
+ <div class=text1> Kyrie Flytrap 3 EP<br>₱3,895</div>
+ <div class=text2> Nike Phantom GT Club MG<br>₱2,895</div>
+ <div class=text3> Nike Renewer Ride<br>₱3,695</div>
+ <div class=text7> Air Jordan 1 Mid<br>₱3,995</div>
+ <div class=text8> Nike React Miler Shield By You<br>₱8,295</div>
+ <div class=text9> NikeCourt Royale 2<br>₱2,595</div>
+ <div class=text5> What is Nike FlyEase ?</div>
+ <div class=text4> Nike FlyEase creates shoes that are and quick and easy to get into, and more hands-free. <br>
+				   The easy - entry designs expand access and unlock benefits for all athletes*. From <br>
+				   pinnacle FlyEase innovations to the wide selection of easy on/off footwear, you can do <br>
+				   more of what matters most — play.</div>
+ <div class=text6> Just Do It.</div>
+ <img src="last.png" style="width:10%;" class="last1">
+</body>
+</html>
